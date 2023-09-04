@@ -1,0 +1,12 @@
+{%- assign deviceList = "" -%}
+{
+  "companyId": 0,
+  "CmpId": "{{content.ChangeEventHeader.recordIds[0]}}",
+  "Name": "{{content.Name}}",
+    {% if content.NumberOfEmployees != null %}"NumEmp": {{content.NumberOfEmployees}},{% else %}"NumEmp": 0,{% endif %}
+  "Address1": "{{content.BillingAddress.Street}}",
+  "Address2": "{{content.BillingAddress.Address2}}",
+  "Postcode": "{{content.BillingAddress.PostalCode}}",
+  "City": "{{content.BillingAddress.City}}",
+  "Country": "{{content.BillingAddress.Country}}"  
+}

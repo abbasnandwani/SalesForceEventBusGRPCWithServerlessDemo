@@ -1,0 +1,15 @@
+{
+  "companyId": 0,
+  "CmpId": "{{content.ChangeEventHeader.recordIds[0]}}",
+  "Name": "{{content.Name}}",
+{% if content.NumberOfEmployees != blank -%}
+  "NumOfEmp": {{content.NumberOfEmployees}},
+{% else -%}
+  "NumOfEmp": 0,
+{% endif -%}
+  "Address1": "{{content.BillingAddress.Street}}",
+  "Address2": "{{content.BillingAddress.Address2}}",
+  "Postcode": "{{content.BillingAddress.PostalCode}}",
+  "City": "{{content.BillingAddress.City}}",
+  "Country": "{{content.BillingAddress.Country}}"
+}
