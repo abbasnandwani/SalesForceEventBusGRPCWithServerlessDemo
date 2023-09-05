@@ -1,0 +1,17 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "UseDevelopmentStorage=true",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet",
+    "salesforce_Username": "<Salesforce username>",
+    "salesforce_Password": "<Salesforce password>",
+    "salesforce_ClientId": "<Salesforce ClientID>",
+    "salesforce_ClientSecret": "<Salesforce Secret>",
+    "salesforce_GrantType": "password",
+    "salesforce_TenantId": "<Salesforce TenantId>",
+    "salesforce_pub_sub_endpoint": "https://api.pubsub.salesforce.com:7443",
+    "salesforce_platform_event_name": "/data/CaseChangeEvent",
+    "blobconstr": "<blob storage connstr>",
+    "sbconnstr": "<service bus connstr>"
+  }
+}

@@ -15,76 +15,6 @@ namespace FunctionAppDemoSF
 {
     public class Function1
     {
-//        [FunctionName("Function1")]
-//        public static async Task Run([TimerTrigger("0 */1 * * * *")] TimerInfo myTimer, ILogger log)
-//        {
-//            return; //temp
-
-//            string Username = Environment.GetEnvironmentVariable("salesforce_Username");
-//            string GrantType = Environment.GetEnvironmentVariable("salesforce_GrantType");
-//            string Password = Environment.GetEnvironmentVariable("salesforce_Password");
-//            string ClientId = Environment.GetEnvironmentVariable("salesforce_ClientId");
-//            string ClientSecret = Environment.GetEnvironmentVariable("salesforce_ClientSecret");
-
-//            //log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}\n{Username}\n{GrantType}\n{Password}\n{ClientId}\n{ClientSecret}");
-//            log.LogInformation($"C# Timer trigger function executed at: {DateTime.Now}");
-
-//            #region Get Salesforce Access Token 
-
-//            SalesforceConfig sconfig = new SalesforceConfig()
-//            {
-//                ClientId = ClientId,
-//                ClientSecret = ClientSecret,
-//                GrantType = GrantType,
-//                Password = Password,
-//                Username = Username
-//            };
-
-//            SalesforceHttpClient salesforceClient = new SalesforceHttpClient(sconfig);
-//            var auth = await salesforceClient.GetToken();
-//            string tenantId = Environment.GetEnvironmentVariable("salesforce_TenantId");
-//            #endregion
-
-//            #region Call Salesforce Pub/Sub Client
-//            Metadata metadata = new Metadata{
-//    { "accesstoken", auth.AccessToken},
-//    { "instanceurl", auth.InstanceUrl},
-//    { "tenantid", tenantId}
-//};
-//            string pubSubEndpoint = Environment.GetEnvironmentVariable("salesforce_pub_sub_endpoint");
-//            string platformEventName = Environment.GetEnvironmentVariable("salesforce_platform_event_name");
-//            SalesforcePubSubClient salesforcePubSubClient = new SalesforcePubSubClient(pubSubEndpoint, metadata, log);
-
-//            var topic = salesforcePubSubClient.GetTopicByName(platformEventName);
-//            var schema = salesforcePubSubClient.GetSchemaById(topic.SchemaId);
-
-//            while (true)
-//            {
-//                log.LogInformation($"Listening to Event Bus {platformEventName}....");
-
-//                CancellationTokenSource source = new CancellationTokenSource();
-//                source.CancelAfter(TimeSpan.FromSeconds(30));
-//                //await salesforcePubSubClient.Subscribe(platformEventName, schema.SchemaJson);
-//                await salesforcePubSubClient.Subscribe(platformEventName, schema.SchemaJson, source);
-
-//                log.LogInformation("Listening to Event Bus Complete");
-
-//                log.LogInformation("Waiting for 30 seconds");
-//                Task.Delay(30000).Wait();
-//                break;
-//            }
-
-//            //log.LogInformation("Listening to Event Bus....");
-//            //CancellationTokenSource source = new CancellationTokenSource();
-//            //source.CancelAfter(TimeSpan.FromSeconds(30));
-//            ////await salesforcePubSubClient.Subscribe(platformEventName, schema.SchemaJson);
-//            //await salesforcePubSubClient.Subscribe(platformEventName, schema.SchemaJson, source);
-
-//            //log.LogInformation("Listening to Event Bus Complete");
-//            #endregion
-//        }
-
-
         [FunctionName("SFScheduleTrigger")]
         public static async Task SFScheduleTrigger([TimerTrigger("0 */1 * * * *")] TimerInfo myTimer,
             [Blob("eventfiles", Connection = "blobconstr")] BlobContainerClient blobContainerClient,
@@ -147,7 +77,7 @@ namespace FunctionAppDemoSF
     { "tenantid", tenantId}
 };
             string pubSubEndpoint = Environment.GetEnvironmentVariable("salesforce_pub_sub_endpoint");
-            string platformEventName = "/data/AccountChangeEvent"; // Environment.GetEnvironmentVariable("salesforce_platform_event_name");
+            string platformEventName = Environment.GetEnvironmentVariable("salesforce_platform_event_name");
             SalesforcePubSubClient salesforcePubSubClient = new SalesforcePubSubClient(pubSubEndpoint, metadata, log);
 
             //set blob contaier reference
