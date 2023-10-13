@@ -5,6 +5,7 @@ VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5A523E6D-4DE4-42AC-A59B-21D5CB161C56}"
 	ProjectSection(SolutionItems) = preProject
+		Notes.md = Notes.md
 		Readme.md = Readme.md
 	EndProjectSection
 EndProject
@@ -12,11 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcGreeter", "GrpcGreeter\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrpcGreeterClient", "GrpcGreeterClient\GrpcGreeterClient.csproj", "{4BAE5CC0-CED2-4B28-A6D5-A00FBF510022}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesforceEventBusPubSub", "SalesforceEventBusPubSub\SalesforceEventBusPubSub.csproj", "{B14FE185-085C-4603-B5D0-D22AF323F88A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalesforceEventBusPubSub", "SalesforceEventBusPubSub\SalesforceEventBusPubSub.csproj", "{B14FE185-085C-4603-B5D0-D22AF323F88A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunctionAppDemoSF", "FunctionAppDemoSF\FunctionAppDemoSF.csproj", "{71EF00F2-C42C-4C14-B3CD-943326302A0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionAppDemoSF", "FunctionAppDemoSF\FunctionAppDemoSF.csproj", "{71EF00F2-C42C-4C14-B3CD-943326302A0D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesforceEventBusPubSubLib", "SalesforceEventBusPubSubLib\SalesforceEventBusPubSubLib.csproj", "{9F46D796-BAA7-46CC-AEAD-8DCB035B3C12}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalesforceEventBusPubSubLib", "SalesforceEventBusPubSubLib\SalesforceEventBusPubSubLib.csproj", "{9F46D796-BAA7-46CC-AEAD-8DCB035B3C12}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
