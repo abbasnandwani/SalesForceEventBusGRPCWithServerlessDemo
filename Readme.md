@@ -6,7 +6,7 @@
 * Azure Subscription
 * Visual Studio 2022
 * .Net Core 6.0
-* Salesforce. You can use <a target="_blank" href="https://developer.salesforce.com/signup">Salesforce Developer edition</a> for testing.
+* Salesforce. You can use <a href="https://developer.salesforce.com/signup" target="_blank">Salesforce Developer edition</a> for testing.
 * 
 ## Architecture
 <img src="./Architecture.jpg"/>
